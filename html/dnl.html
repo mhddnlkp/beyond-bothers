@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammed Danil KP</title>
+</head>
+<body>
+    <main>
+        <div class="fade">
+            <img src="./dnl.jpg" alt="">
+            <h1>Hey, Im Danil</h1>
+            <p>Connect me</p>
+        </div>
+        <div class="icons">
+            <div class="icon">
+                <img src="./instagram.png" alt="">
+            </div>
+            <div class="icon">
+                <img src="./whatsapp.png" alt="">
+            </div>
+            <div class="icon">
+                <img src="./linkedin.png" alt="">
+            </div>
+            <div class="icon">
+                <img src="./twitter.png" alt="">
+            </div>
+        </div>
+    </main>
+</body>
+<style>
+    body {
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1 {
+    font-weight: 100;
+    margin-bottom: 0px;
+}
+
+p {
+    font-weight: lighter;
+    font-size: 1.5rem;
+    margin-top: 0px;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 25px;
+    background: rgb(96,108,93);
+    background: linear-gradient(0deg, rgba(96,108,93,1) 0%, rgba(74,83,72,1) 6%, rgba(0,0,0,1) 100%);
+}
+
+.fade {
+    opacity: 0s;
+    animation: fadeIn 1s 1s ease-in-out forwards;
+    text-align: center;
+    >img {
+        border-radius: 35px;
+        width: 300px;
+        height: auto;
+        box-shadow: 0 0 10 rgba(0, 0, 0, 0.2);
+    }
+}
+
+.icons {
+    opacity: 0s;
+    border-radius: 35px;
+    background: rgb(245, 243, 245);
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    animation: jumpIn 1s 2s ease-in-out forwards;
+}
+
+.icon {
+    background: #fff;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    >img {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+    }
+}
+
+.icon:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: all 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes jumpIn {
+    0% {
+        opacity: 0;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+</style>
+</html>
